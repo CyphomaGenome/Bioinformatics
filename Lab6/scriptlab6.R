@@ -27,4 +27,9 @@ Align_Vector<-unlist(Align_List)
 GC(Align_Vector)
 Align_seqinrformat<-msaConvert(Align, type="seqinr::alignment")
 d <- dist.alignment(Align_seqinrformat, "identity")
-d
+d #identity matrix
+Biostrings::translate(Align_stringset)
+#install.packages("phangorn")
+library(phangorn)
+Alignment_phyDat <- msaConvert(Align, type="phangorn::phyDat")
+write.phyDat(Alignment_phyDat, "alignment.fasta", format = "fasta")

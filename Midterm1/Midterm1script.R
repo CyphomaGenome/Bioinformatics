@@ -45,7 +45,7 @@ Alignment #print for visualization
 
 Alignment_seqinrformat<-msaConvert(Alignment, type="seqinr::alignment") #converts the multiple sequence alignment to an alignment within the seqinr package
 Alignment_seqinrformat #print for visualization
-d <- dist.alignment(Align_seqinrformat, "identity") #creates a similarity matrix of the sequences
+d <- dist.alignment(Alignment_seqinrformat, "identity") #creates a similarity matrix of the sequences
 d #print matrix to see percent identity scores
 ###The alignment is good. The percent identity of 0 to 0.11 shows that the sequences are all homologous
 

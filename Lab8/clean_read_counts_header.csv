@@ -1,0 +1,5 @@
+# sample,reads,total bp,mean length, 95 CI length,min,max,median,
+alligator_mississippiensis.contigs.fasta,870,220522,253.4735632,6.997278008,56,3831,236,5
+anolis_carolinensis.contigs.fasta,1134,355594,313.5749559,8.013070858,56,3182,243,9
+gallus_gallus.contigs.fasta,5231,2842031,543.3054865,2.892137844,56,4117,495,107
+mus_musculus.contigs.fasta,1391,324034,232.9503954,6.91311229,56,1646,88,13

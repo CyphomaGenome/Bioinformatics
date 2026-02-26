@@ -1,0 +1,5 @@
+file,format,type,num_seqs,sum_len,min_len,avg_len,max_len,Q1,Q2,Q3,sum_gap,N50,N50_num,Q20(%),Q30(%),AvgQual,GC(%),sum_n
+spades-assemblies/contigs/alligator_mississippiensis.contigs.fasta,FASTA,DNA,870,220522,56,253.5,3831,213,236,280,0,257,148,0,0,0,44.33,0
+spades-assemblies/contigs/anolis_carolinensis.contigs.fasta,FASTA,DNA,1134,355594,56,313.6,3182,94,243,397,0,479,190,0,0,0,38.96,16
+spades-assemblies/contigs/gallus_gallus.contigs.fasta,FASTA,DNA,5231,2842031,56,543.3,4117,378,495,684,0,608,450,0,0,0,41.47,0
+spades-assemblies/contigs/mus_musculus.contigs.fasta,FASTA,DNA,1391,324034,56,233,1646,64,88,278,0,536,173,0,0,0,39.94,0

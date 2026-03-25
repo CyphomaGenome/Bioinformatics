@@ -1,0 +1,5 @@
+#Navigate to proper folder
+cd /mnt/c/Bioinformatics/Bioinformatics/Lab11
+
+#Run raxml
+../../raxml-ng_v2.0.0_linux_x86_64/raxml-ng --all --msa primate.phy --model LG+G8+F --tree pars{10} --bs-trees 200

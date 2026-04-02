@@ -1,0 +1,94 @@
+#All inside of Windows PowerShell
+
+###Super Computer
+
+#login
+ssh corieck3356@hpc.fgcu.edu
+#Password
+test123
+
+###Virtual Computer
+
+#transfer files
+scp -r Lab9/ corieck3356@hpc.fgcu.edu:/export/home/bio_class/corieck3356/
+Password
+test123
+
+###Super Computer
+
+#check that files transferred
+cd Lab9
+ls 
+
+#unzip files
+unzip fastq.zip
+unzip ncbi_dataset.zip
+unzip seqaln_lite.zip
+ls
+
+#remove leftover zip files
+rm fastq.zip
+rm ncbi_dataset.zip
+rm seqaln_lite.zip
+ls
+
+#edit slurm file
+nano slurm_test.sh
+#I changed some directory names to fit my configuration
+#ctrl x to exit nano
+
+#run the slurm file
+sbatch slurm_test.sh
+
+#check if job has completed
+squeue
+
+#view log file
+cat assembly.test.log
+
+#the first time I tried this, I had to reconfigure the space to include the desired genome folder
+mkdir genome
+cp ncbi_dataset/data/GCA_900604845.1/GCA_900604845.1_TTHNAR1_genomic.fna genome/Thermus_thermophilus_TTHNAR1.fa
+
+#I ran the slurm again
+#run the slurm file
+sbatch slurm_test.sh
+
+#check if job has completed
+squeue
+
+#view log file
+cat assembly.test.log
+
+#the second time I tried this, I had to reconfigure the space to include the alignment folder
+mkdir alignment
+
+#I then added the following line of code to the slurm from the bug fix Canvas anouncement
+#module load biological/perl_5.40
+#I also commented out the unpiped lines of code as well as the gatk command
+
+#I ran the slurm again
+#run the slurm file
+sbatch slurm_test.sh
+
+#check if job has completed
+squeue
+
+#view log file
+cat assembly.test.log
+
+#finally everything worked!
+
+#now it is time to export everything back to the virtual computer
+
+###Virtual Computer
+
+#transfer files
+scp -r corieck3356@hpc.fgcu.edu:/export/home/bio_class/corieck3356/Lab9/ C:/Users/corieck3356/
+Password
+test123
+
+#I then manually copied all of the files inside of Lab9 to a .zip file and emailed it to myself as a OneDrive link
+#On my regular computer, I downloaded the file from the OneDrive link and unzipped it into my Lab9 folder
+
+

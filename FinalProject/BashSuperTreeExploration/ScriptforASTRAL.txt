@@ -1,0 +1,21 @@
+#Go to working directory
+cd /mnt/c/Bioinformatics/Bioinformatics/FinalProject/BashSuperTreeExploration
+#combine tree files
+cat *.tre > all_gene_trees.nwk
+
+#I then had to go into the file to put the trees on separate lines of code
+#(OG:0.5,(A:0.1,(B:0.2,C:0.2):0.1):0.3);
+#(OG:0.4,(D:0.3,(B:0.1,C:0.1):0.2):0.2);
+#(OG:0.5,(A:0.3,D:0.3):0.2);
+#instead of
+#(OG:0.5,(A:0.1,(B:0.2,C:0.2):0.1):0.3);(OG:0.4,(D:0.3,(B:0.1,C:0.1):0.2):0.2);(OG:0.5,(A:0.3,D:0.3):0.2);
+
+#sudo apt update
+#sudo apt install openjdk-21-jre-headless
+
+#run ASTRAL
+java -jar astral.5.7.8.jar -i all_gene_trees.nwk -o species_tree.tre
+java -jar ../../../Astral.5.7.8/ASTRAL/astral.5.7.8.jar -i all_gene_trees.nwk -o species_tree.tre
+
+#Then visualize the resulting .tre file inside of FigTree
+#Root the tree and choose decending node order

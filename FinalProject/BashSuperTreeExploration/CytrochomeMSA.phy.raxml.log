@@ -1,0 +1,36 @@
+
+RAxML-NG v. 2.0.0 released on 11.03.2026 by The Exelixis Lab.
+Developed by: Oleksiy M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth,
+              Julia Haag, Anastasis Togkousidis, Julius Wiegert, Christoph Stelz.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, 4 cores, 5 GB RAM
+
+RAxML-NG was called at 04-Apr-2026 01:34:13 as follows:
+
+../../../raxml-ng_v2.0.0_linux_x86_64/raxml-ng --all --msa CytrochomeMSA.phy --model LG+G8+F --tree pars{10} --bs-trees 200
+
+Analysis options:
+  run mode: Tree with branch support (adaptive) (Felsenstein Bootstrap)
+  start tree(s): parsimony+BRLEN (10)
+  bootstrap replicates: parsimony (200)
+  random seed: 1775280853
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  stopping rule: OFF
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  FreeRate optimization method: AUTO
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+
+ERROR: Alignment file not found: CytrochomeMSA.phy
+
